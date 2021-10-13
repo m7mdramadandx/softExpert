@@ -54,7 +54,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initCarsListUI(list: MutableList<CarModel>) {
-        binding.rvCars.adapter = CarsAdapter(list)
+        binding.rvCars.apply {
+            adapter = CarsAdapter(list)
+            visibility = View.VISIBLE
+        }
     }
 
 }
